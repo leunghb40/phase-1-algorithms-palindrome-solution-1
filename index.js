@@ -1,5 +1,17 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  word = word.toLowerCase();
+
+  // Use two pointers to check if the word is a palindrome
+  let left = 0;
+  let right = word.length - 1;
+  while (left < right) {
+    if (word[left] !== word[right]) {
+      return false;
+    }
+    left++;
+    right--;
+  }
+  return true;
 }
 
 /* 
